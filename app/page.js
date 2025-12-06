@@ -6,7 +6,7 @@ export default function Home() {
     <>
       <main>
         <MainMovie />
-        <MovieList />
+        <MovieList showPagination={false} />
       </main>
     </>
   );

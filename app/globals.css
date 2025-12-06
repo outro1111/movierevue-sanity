@@ -18,9 +18,9 @@
   --color-blue: #105cb1;
   --color-fix-white: #fff;
   --color-fix-black: #000;
-  --font-size-small1: clamp(12px, 1.5vw, 14px);
-  --font-size-content1: clamp(14px, 1.5vw, 16px);
-  --font-size-content2: clamp(16px, 1.5vw, 18px);
+  --font-size-small1: clamp(14px, 1.5vw, 16px);
+  --font-size-content1: clamp(16px, 1.5vw, 18px);
+  --font-size-content2: clamp(18px, 1.5vw, 20px);
   --font-size-title1: clamp(20px, 1.5vw, 26px);
   --font-size-title2: clamp(24px, 2.5vw, 34px);
   --font-size-title3: clamp(34px, 2.5vw, 54px);

@@ -1,9 +1,12 @@
 import MovieList from "@/components/MovieList"
+import { Suspense } from "react"
 
-export default function MoviesPage() {
+export default function MoviesPage({ searchParams }) {
   return (
     <>
-      <MovieList />
+      <Suspense fallback={<div>Loading...</div>}>
+        <MovieList searchParams={searchParams} limit={6} />
+      </Suspense>
     </>
   )
 }

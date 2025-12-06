@@ -22,14 +22,14 @@ export default async function MainMovie() {
   // console.log(movie)
   return (
     <div className="main_movie">
-      <Image src={urlFor(movie.images).url()} alt={movie.images.alt} width={500} height={300} />
+      <Image loading="eager" src={urlFor(movie.images).url()} alt={movie.images.alt} width={1950} height={820} />
       <div className="feature">
         <h1>Screenplay Now!</h1>
         {/* <Link href={`/movies/${movies[1].id}`}> */}
         <strong>{movie.title}</strong>
         <em>{movie.titleOriginal}</em>
         <div className="description">{movie.description}</div>
-        <div className="description"><PortableText value={movie.content} /></div>
+        {/* <div className="description"><PortableText value={movie.content} /></div> */}
         {/* </Link> */}
       </div>
     </div>

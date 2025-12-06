@@ -39,8 +39,7 @@ export default async function MovieDetailPage({ params }) {
       <div className="detail_movie">
         <div className="detail_top">
           <div className="top_bg">
-
-            <Image src={urlFor(movie.images[1]).url()} alt={movie.images[1].alt} width={500} height={300} />
+            <Image loading="eager" src={urlFor(movie.images[1]).url()} alt={movie.images[1].alt} width={1523} height={692} />
           </div>
           <div className="top_con">
             <h2 className="title">{movie.title}</h2>
@@ -57,7 +56,7 @@ export default async function MovieDetailPage({ params }) {
             <PortableText value={movie.content} />
           </div>
           <div className="poster">
-            <Image src={urlFor(movie.poster).url()} alt={movie.poster.alt} width={500} height={300} />
+            <Image loading="eager" src={urlFor(movie.poster).url()} alt={movie.poster.alt} width={311} height={466} />
           </div>
 
           <div className="cast">
@@ -66,7 +65,9 @@ export default async function MovieDetailPage({ params }) {
               {movie.cast.map((cast) => (
                 <li key={cast._key}>
                   <p className="photo">
-                    <Image src={urlFor(cast.photo).url()} alt={cast.photo.alt} width={500} height={300} />
+                    {cast.photo?.asset && (
+                      <Image loading="eager" src={urlFor(cast.photo).url()} alt={cast.photo.alt} width={150} height={150} />
+                    )}
                   </p>
                   <p className="name">{cast.name}</p>
                   <p className="role">{cast.role}</p>
@@ -80,7 +81,7 @@ export default async function MovieDetailPage({ params }) {
             <ul>
               {movie.images.map((image) => (
                 <li key={image._key}>
-                  <Image src={urlFor(image).url()} alt={image.alt} width={500} height={300} />
+                  <Image loading="eager" src={urlFor(image).url()} alt={image.alt} width={640} height={440} />
                 </li>
               ))}
             </ul>

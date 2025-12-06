@@ -8,7 +8,7 @@ export const movieSchema = defineType({
     defineField({
       name: 'title',
       type: 'string',
-      validation: rule => rule.min(3),
+      validation: rule => rule.min(1).required().error('영화 이름을 입력해주세요'),
     }),
     defineField({
       name: 'titleOriginal',
