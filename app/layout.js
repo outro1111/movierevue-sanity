@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="kr">
       <body className={pretendard.className}>
         <div id="wrap">
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="data-loader"></div>}>
             <Navbar />
           </Suspense>
           <div id="content">
