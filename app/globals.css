@@ -1,5 +1,4 @@
 @charset "utf-8";
-
 :root {
   color-scheme: light;
   --color-text: #000;
@@ -37,7 +36,6 @@
   --icon-star: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" viewBox="0 0 24 24"%3E%3Cpath fill="white" d="m12.001.63l2.903 8.35l8.839.181l-7.045 5.341l2.56 8.462L12 17.914l-7.256 5.05l2.56-8.462L.26 9.161l8.839-.18L12 .63Z"%2F%3E%3C%2Fsvg%3E');
   --icon-cast-empty: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.0' viewBox='0 0 144.000000 144.000000' preserveAspectRatio='xMidYMid meet'%3E%3Cg transform='translate(0.000000,144.000000) scale(0.100000,-0.100000)' fill='%23ccc' stroke='none'%3E%3Cpath d='M580 1425 c-240 -52 -449 -226 -531 -444 -122 -326 -4 -680 291 -870 150 -97 340 -132 518 -95 338 69 582 364 582 705 0 136 -53 299 -133 411 -167 235 -455 351 -727 293z m198 -449 c104 -54 109 -186 10 -246 -112 -68 -254 63 -194 178 16 30 53 66 76 75 28 10 81 7 108 -7z m90 -331 c68 -29 122 -102 122 -165 0 -45 -26 -38 -34 9 -7 45 -44 94 -90 119 -45 24 -247 24 -292 0 -46 -25 -83 -74 -90 -119 -4 -23 -12 -39 -20 -39 -31 0 -5 101 39 149 43 47 92 61 215 61 79 0 124 -5 150 -15z'/%3E%3Cpath d='M673 945 c-20 -9 -39 -28 -50 -50 -15 -32 -16 -40 -3 -78 27 -76 116 -98 173 -41 52 52 36 143 -29 170 -41 17 -50 17 -91 -1z'/%3E%3C/g%3E%3C/svg%3E");
 }
-
 html.dark {
   color-scheme: dark;
   --color-text: #fff;
@@ -55,7 +53,6 @@ html.dark {
   --color-red: #e79c9b;
   --color-blue: #52a2fc;
 }
-
 html,
 body,
 div,
@@ -100,13 +97,11 @@ header {
   box-sizing: border-box;
   font-family: var(--font-pretendard);
 }
-
 body {
   background-color: var(--color-bg-body);
   color: var(--color-text);
   transition: background-color .3s ease;
 }
-
 input,
 select,
 textarea {
@@ -114,52 +109,42 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.1)
 }
-
 input::placeholder {
   color: var(--color-text-secondary);
   font-weight: 400
 }
-
 input:focus {
   background: rgba(255, 255, 255, 0.2)
 }
-
 select option {
   color: #000
 }
-
 textarea {
   height: auto
 }
-
 ol,
 ul,
 li {
   list-style: none;
 }
-
 a:link,
 a:visited {
   text-decoration: none
 }
-
 a:hover,
 a:active {
   text-decoration: none
 }
-
 html {
   position: relative;
   width: 100%;
   height: 100%;
   overflow-y: scroll
 }
-
 #content {
   position: relative;
   padding-bottom: 10rem
 }
-
 #header {
   display: flex;
   align-items: center;
@@ -170,16 +155,13 @@ html {
   max-width: 1600px;
   margin: 0 auto;
 }
-
 #header>* {
   flex: 1;
 }
-
 #header h1 {
   position: relative;
   text-align: center
 }
-
 /* #header h1 img {position:relative;top:.7rem;width:clamp(120px, 11vw, 204px);transform:scaleY(.9);} */
 #header h1 a .logo {
   position: relative;
@@ -192,49 +174,40 @@ html {
   background-size: clamp(120px, 11vw, 204px) auto;
   vertical-align: top
 }
-
 #header.main h1 a .logo,
 html.dark #header h1 .logo {
   background: url('../public/images/logo_w.svg') no-repeat center center;
   background-size: clamp(120px, 11vw, 204px) auto
 }
-
 #header h1 a,
 #header h1 a.active {
   position: relative;
   font-size: var(--font-size-title2);
 }
-
 /* html.light #header h1 .logo_dark, html.dark #header h1 .logo_light {display:none} */
 #header nav {
   order: -1;
 }
-
 #header nav ul {
   display: flex;
 }
-
 #header nav li {
   margin-right: clamp(2px, 1.5vw, 6px)
 }
-
 #header nav ul a {
   padding: .2rem .5rem;
   font-size: var(--font-size-small1)
 }
-
 #header nav ul a.active,
 #header nav ul a:hover {
   color: var(--color-text-inversion);
   background: var(--color-bg)
 }
-
 #header .util {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
-
 #header .btn_darkmode {
   position: relative;
   width: 23px;
@@ -248,11 +221,9 @@ html.dark #header h1 .logo {
   background: var(--color-text);
   mask-image: var(--icon-darkmode-dark);
 }
-
 html.dark #header .btn_darkmode {
   mask-image: var(--icon-darkmode-light);
 }
-
 #header .search_area {
   display: flex;
   align-items: center;
@@ -260,7 +231,6 @@ html.dark #header .btn_darkmode {
   flex: 0;
   margin-left: clamp(8px, 1vw, 12px)
 }
-
 #header .search_area .btn_search {
   position: relative;
   width: 23px;
@@ -271,7 +241,6 @@ html.dark #header .btn_darkmode {
   background: var(--color-text);
   mask-image: var(--icon-search)
 }
-
 #header .search_area .search_in {
   position: fixed;
   top: 0;
@@ -282,7 +251,6 @@ html.dark #header .btn_darkmode {
   height: 0;
   overflow: hidden
 }
-
 #header .search_area .search_form {
   display: flex;
   align-items: center;
@@ -290,7 +258,6 @@ html.dark #header .btn_darkmode {
   height: 0;
   overflow: hidden
 }
-
 #header .search_area .search_input {
   width: 0;
   font-size: var(--font-size-content1);
@@ -300,30 +267,25 @@ html.dark #header .btn_darkmode {
   outline: 0;
   transition: width ease .6s;
 }
-
 #header .search_area.active .search_form {
   position: relative;
   width: auto;
   height: auto;
   z-index: 11
 }
-
 #header .search_area.active .search_in {
   width: auto;
   height: auto;
   z-index: 10
 }
-
 #header .search_area.active .search_input {
   position: relative;
   width: 12rem;
   height: clamp(30px, 3vw, 32px)
 }
-
 #header .search_area.active .search_form+.btn_search {
   display: none
 }
-
 #header .login_area {
   position: relative;
   display: flex;
@@ -332,7 +294,6 @@ html.dark #header .btn_darkmode {
   flex: 0;
   padding-left: clamp(6px, 1vw, 10px)
 }
-
 #header .login_area .btn_login {
   display: flex;
   position: relative;
@@ -341,7 +302,6 @@ html.dark #header .btn_darkmode {
   cursor: pointer;
   background: none
 }
-
 #header .login_area .btn_login em {
   position: relative;
   width: 23px;
@@ -354,11 +314,36 @@ html.dark #header .btn_darkmode {
   mask-repeat: no-repeat;
   mask-image: var(--icon-login)
 }
-
+#header .login_area.login_is .btn_login em {
+  position: relative;
+  width: clamp(30px, 3vw, 40px);
+  height: clamp(30px, 3vw, 40px);
+  padding: 0;
+  border: 0 none;
+  cursor: pointer;
+  border-radius: 100%;
+  background: none !important;
+  mask-image: none;
+  overflow: hidden;
+}
+#header .login_area.login_is .btn_login em::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: 100%;
+  background: var(--color-bg-body);
+}
+#header .login_area.login_is .btn_login em img {
+  position: relative;
+  width: clamp(30px, 3vw, 40px);
+  height: clamp(30px, 3vw, 40px);
+}
 #header .login_area.login_is .btn_login {
   width: auto
 }
-
 #header .login_area.login_is .btn_login .arrow {
   display: block;
   width: 14px;
@@ -371,7 +356,6 @@ html.dark #header .btn_darkmode {
   mask-repeat: no-repeat;
   mask-image: var(--icon-login-arrow)
 }
-
 #header .user_layer {
   position: absolute;
   top: 36px;
@@ -384,7 +368,6 @@ html.dark #header .btn_darkmode {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
   z-index: 10
 }
-
 #header .user_layer .user_layer_in {
   position: fixed;
   top: 0;
@@ -395,7 +378,6 @@ html.dark #header .btn_darkmode {
   height: 0;
   overflow: hidden
 }
-
 #header .user_layer .user_info {
   position: relative;
   width: 100%;
@@ -404,24 +386,20 @@ html.dark #header .btn_darkmode {
   border-radius: 4px;
   background: var(--color-layer-bg)
 }
-
 #header .user_layer .user_info .name {
   display: block;
   font-size: var(--font-size-content2);
   padding-bottom: 4px
 }
-
 #header .user_layer .user_info .email {
   display: block;
   font-size: var(--font-size-small1);
 }
-
 #header .user_layer .btn_area {
   position: relative;
   text-align: right;
   margin: 10px 10px 4px;
 }
-
 #header .user_layer .btn_logout {
   background: none;
   border: 0 none;
@@ -429,7 +407,6 @@ html.dark #header .btn_darkmode {
   color: var(--color-red);
   cursor: pointer;
 }
-
 #header .user_layer .btn_logout .icon {
   display: inline-block;
   width: 14px;
@@ -438,33 +415,27 @@ html.dark #header .btn_darkmode {
   margin-right: 5px;
   background: var(--icon-logout);
 }
-
 #header .user_layer.active .user_layer_in {
   width: auto;
   height: auto;
   z-index: 10
 }
-
 #header .user_layer.active .user_info,
 #header .user_layer.active .btn_area {
   z-index: 11
 }
-
 #header .loginLayerfade-enter-active,
 #header .loginLayerfade-leave-active {
   transition: all .3s ease-out;
 }
-
 #header .loginLayerfade-enter-from {
   opacity: 0;
   transform: translateY(5px);
 }
-
 #header .loginLayerfade-leave-to {
   opacity: 0;
   transform: translateY(-5px);
 }
-
 #header .lang_area {
   position: relative;
   display: flex;
@@ -473,7 +444,6 @@ html.dark #header .btn_darkmode {
   flex: 0;
   padding-left: clamp(8px, 1vw, 12px)
 }
-
 #header .lang_area .btn_lang {
   position: relative;
   width: 23px;
@@ -489,7 +459,6 @@ html.dark #header .btn_darkmode {
   mask-repeat: no-repeat;
   mask-image: var(--icon-lang)
 }
-
 #header .lang_layer {
   position: absolute;
   top: 36px;
@@ -502,7 +471,6 @@ html.dark #header .btn_darkmode {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .1), 0 2px 4px -2px rgba(0, 0, 0, .1);
   z-index: 10
 }
-
 #header .lang_layer .lang_layer_in {
   position: fixed;
   top: 0;
@@ -513,45 +481,37 @@ html.dark #header .btn_darkmode {
   height: 0;
   overflow: hidden
 }
-
 #header .lang_layer.active .lang_layer_in {
   width: auto;
   height: auto;
   z-index: 10
 }
-
 #header .lang_layer.active .lang_menu {
   position: relative;
   z-index: 11
 }
-
 #header .lang_layer.active .lang_menu a {
   display: block;
   font-size: var(--font-size-small1);
   padding: 3px 14px;
   margin: 2px 0
 }
-
 #header .lang_layer.active .lang_menu a.active {
   color: var(--color-blue);
   background: var(--color-layer-bg)
 }
-
 #header .langLayerfade-enter-active,
 #header .langLayerfade-leave-active {
   transition: all .3s ease-out;
 }
-
 #header .langLayerfade-enter-from {
   opacity: 0;
   transform: translateY(5px);
 }
-
 #header .langLayerfade-leave-to {
   opacity: 0;
   transform: translateY(-5px);
 }
-
 #header.main {
   position: absolute;
   top: 0;
@@ -559,76 +519,61 @@ html.dark #header .btn_darkmode {
   right: 0;
   z-index: 5
 }
-
 #header.main nav ul a,
 #header.main h1 a,
 #header.main h1 a.active {
   color: var(--color-fix-white)
 }
-
 #header.main nav ul a.active,
 #header.main nav ul a:hover {
   color: var(--color-fix-black);
   background: var(--color-fix-white)
 }
-
 #header.main .btn_darkmode {
   background: var(--color-fix-white)
 }
-
 #header.main .btn_lang {
   background: var(--color-fix-white)
 }
-
 #header.main .search_area .btn_search {
   background: var(--color-fix-white)
 }
-
 #header.main .search_area .search_input {
   color: var(--color-fix-white);
   background: none;
   border: 0 none;
   border-bottom: 1px solid var(--color-fix-white);
 }
-
 #header.main .search_area .search_input::placeholder {
   color: #aaa
 }
-
 #header.main .login_area .btn_login em {
   background: var(--color-fix-white)
 }
-
 #header.main .login_area.login_is .btn_login .arrow {
   background: var(--color-fix-white)
 }
-
 @media screen and (max-width:800px) {
   #header {
     padding: 3rem 2rem 1rem
   }
-
   #header .search_area.active {
     width: 100%;
     flex: 1
   }
-
   #header .search_area.active .search_form {
     width: 100%;
     margin-top: -1px;
     justify-content: flex-end
   }
-
   #header .search_area.active .search_input {
     width: calc(100% - 3rem)
   }
-
   #header nav:has(+ .util .search_area.active),
   #header h1:has(+ nav + .util .search_area.active) {
     display: none
   }
 }
-
 .sr_only {
   position: absolute;
   width: 1px;
@@ -639,7 +584,6 @@ html.dark #header .btn_darkmode {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
 .error {
   height: 88vh;
   text-align: center;
@@ -648,20 +592,16 @@ html.dark #header .btn_darkmode {
   align-items: center;
   justify-content: center;
 }
-
 .error h2 {
   font-size: var(--font-size-title2)
 }
-
 .error p {
   font-size: var(--font-size-content1);
   padding: 0.5rem 0 0;
 }
-
 .error p+p {
   padding: 0.2rem 0 2rem;
 }
-
 .sub_title {
   position: relative;
   width: 100%;
@@ -671,7 +611,6 @@ html.dark #header .btn_darkmode {
   margin-top: clamp(38px, 4vw, 68px);
   z-index: 5
 }
-
 .btn {
   position: relative;
   font-size: var(--font-size-content1);
@@ -684,7 +623,6 @@ html.dark #header .btn_darkmode {
   transition: color 0.3s ease;
   z-index: 1
 }
-
 .btn:before {
   content: '';
   position: absolute;
@@ -696,38 +634,31 @@ html.dark #header .btn_darkmode {
   transition: width 0.3s ease;
   z-index: -1
 }
-
 .btn:hover {
   color: var(--color-text-inversion);
 }
-
 .btn:hover:before {
   width: 100%;
   height: 100%;
 }
-
 .btn.sub {
   padding: 0 clamp(6px, 1vw, 8px);
   font-size: var(--font-size-small1)
 }
-
 .btn:disabled {
   border: 1px solid var(--color-disabled-border);
   color: var(--color-text-secondary);
   background: var(--color-disabled-bg);
 }
-
 .btn:disabled:before {
   display: none;
 }
-
 .pagination {
   display: flex;
   margin-top: 25px;
   border-radius: 4px;
   justify-content: center;
 }
-
 .pagination li a span {
   position: relative;
   display: block;
@@ -739,41 +670,33 @@ html.dark #header .btn_darkmode {
   cursor: pointer;
   transition: background-color .3s ease;
 }
-
 .pagination li.page-util {
   padding: 0
 }
-
 .pagination li.page-util a span {
   transform: scale3d(.8, 1.6, 1)
 }
-
 .pagination li a.disabled {
   cursor: default;
   pointer-events: none;
 }
-
 .pagination li a.disabled span {
   color: var(--color-disabled-border)
 }
-
 .pagination li {
   display: inline-flex;
   align-items: center;
   padding: .0 .4em
 }
-
 .pagination li a span.active {
   background-color: var(--color-bg);
   color: var(--color-bg-inversion)
 }
-
 .main_movie {
   position: relative;
   height: 90vh;
   margin-bottom: 4rem
 }
-
 .main_movie:before {
   content: '';
   position: absolute;
@@ -783,7 +706,6 @@ html.dark #header .btn_darkmode {
   left: 0;
   background: rgba(0, 0, 0, 0.30)
 }
-
 .main_movie:after {
   content: '';
   position: absolute;
@@ -793,14 +715,12 @@ html.dark #header .btn_darkmode {
   left: 0;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 32%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 0) 100%)
 }
-
 .main_movie img {
   height: 100%;
   width: 100%;
   object-position: center;
   object-fit: cover
 }
-
 .main_movie .feature {
   position: absolute;
   top: 60%;
@@ -813,7 +733,6 @@ html.dark #header .btn_darkmode {
   transform-style: preserve-3d;
   z-index: 5
 }
-
 .main_movie .feature h1 {
   position: relative;
   font-size: var(--font-size-title5);
@@ -827,7 +746,6 @@ html.dark #header .btn_darkmode {
     /*skewX(350deg) rotate(-1.2deg)*/
   ;
 }
-
 .main_movie .feature h1:after {
   content: '';
   position: absolute;
@@ -838,7 +756,6 @@ html.dark #header .btn_darkmode {
   background: rgba(255, 0, 0, 0.6);
   z-index: -1
 }
-
 .main_movie .feature strong {
   display: block;
   font-size: var(--font-size-title2);
@@ -847,19 +764,16 @@ html.dark #header .btn_darkmode {
   line-height: 1.2;
   margin-top: 6rem
 }
-
 .main_movie .feature em {
   display: block;
   font-size: var(--font-size-content1);
   color: var(--color-fix-white);
 }
-
 .main_movie .feature .description {
   font-size: var(--font-size-content1);
   color: var(--color-fix-white);
   margin: 1.5rem auto;
 }
-
 .main_movie .feature .description p {
   font-size: var(--font-size-content1);
   color: var(--color-fix-white);
@@ -870,8 +784,8 @@ html.dark #header .btn_darkmode {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
 }
-
 /* @media screen and (max-width:800px) {
   .main_movie {position:relative;height:88vh}
 } */
@@ -886,7 +800,6 @@ html.dark #header .btn_darkmode {
   justify-content: space-between;
   gap: 10px
 }
-
 .list_search input {
   width: 100%;
   max-height: 44px;
@@ -897,7 +810,6 @@ html.dark #header .btn_darkmode {
   padding: .4rem 0 .4rem 30px;
   background: none;
 }
-
 .list_search:after {
   content: '';
   position: absolute;
@@ -912,19 +824,16 @@ html.dark #header .btn_darkmode {
   background: var(--color-text);
   mask-image: var(--icon-search)
 }
-
 .list_search button {
   flex: 2;
   max-width: 50px;
   border: 0 none;
-  background: #000;
+  background: var(--color-text);
 }
-
 .list_search button span {
   font-size: var(--font-size-content1);
   color: var(--color-text-inversion);
 }
-
 .search_result {
   position: relative;
   width: 100%;
@@ -932,11 +841,9 @@ html.dark #header .btn_darkmode {
   font-size: var(--font-size-content2);
   margin: clamp(10px, 1.5vw, 20px) 0 clamp(30px, 2vw, 40px)
 }
-
 .search_result strong {
   color: var(--color-blue)
 }
-
 .list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -947,20 +854,17 @@ html.dark #header .btn_darkmode {
   padding: 0 2rem;
   margin: 1rem auto
 }
-
 .list li {
   position: relative;
   overflow: hidden;
   padding: clamp(20px, 2vw, 20px) 0 clamp(30px, 3vw, 45px);
   text-align: center
 }
-
 .list li .thumb {
   position: relative;
   overflow: hidden;
   aspect-ratio: auto 9/6;
 }
-
 .list li .thumb img {
   position: absolute;
   top: 0;
@@ -971,11 +875,9 @@ html.dark #header .btn_darkmode {
   transform: scale(1.1, 1.1);
   transition: all ease .9s
 }
-
 .list li .thumb:hover img {
   transform: scale3d(1.0, 1.0, 1.0);
 }
-
 .list li .title {
   margin-top: clamp(12px, 1.5vw, 18px);
   font-size: var(--font-size-title1);
@@ -988,8 +890,8 @@ html.dark #header .btn_darkmode {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
-
 .list li .titleOriginal {
   margin-bottom: clamp(12px, 1.5vw, 16px);
   font-size: var(--font-size-small1);
@@ -1003,8 +905,8 @@ html.dark #header .btn_darkmode {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+  line-clamp: 1;
 }
-
 .list li .description {
   text-align: left;
   text-overflow: ellipsis;
@@ -1013,54 +915,45 @@ html.dark #header .btn_darkmode {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
 }
-
 .list li .description {
   font-size: var(--font-size-content1)
 }
-
 .list li .info {
   display: flex;
   margin: 0.5rem 0
 }
-
 .list li .genre {
   font-size: var(--font-size-small1)
 }
-
 .list li .info .openingDate {
   padding: 0 .6em;
   font-size: var(--font-size-small1);
   color: var(--color-text-secondary)
 }
-
 .list li h2,
 .list li p {
   margin-left: 0.2rem;
   margin-right: 0.2rem;
 }
-
 @media screen and (max-width:800px) {
   .list {
     grid-template-columns: 1fr;
     padding: 0
   }
-
   .list li {
     margin-left: 4rem;
     margin-right: 4rem;
   }
-
   .list li .info {
     margin-top: 1.2em
   }
-
   .list li .thumb img,
   .list li .thumb:hover img {
     transform: none
   }
 }
-
 .nodata {
   text-align: center;
   padding: clamp(190px, 2vw, 200px) 0;
@@ -1068,21 +961,18 @@ html.dark #header .btn_darkmode {
   background: var(--icon-nodata) no-repeat center clamp(100px, 1.5vw, 110px);
   background-size: clamp(60px, 2vw, 70px) clamp(60px, 2vw, 70px)
 }
-
 .detail_movie {
   width: 100%;
   max-width: 1600px;
   margin: 2rem auto 0;
   padding: 0 2rem
 }
-
 .detail_movie .detail_top {
   position: relative;
   width: 100%;
   height: auto;
   aspect-ratio: 2.2;
 }
-
 .detail_movie .detail_top .top_bg {
   width: 100%;
   height: 100%;
@@ -1090,7 +980,6 @@ html.dark #header .btn_darkmode {
   height: auto;
   aspect-ratio: 2.2;
 }
-
 .detail_movie .detail_top .top_bg img {
   width: 100%;
   height: 100%;
@@ -1099,7 +988,6 @@ html.dark #header .btn_darkmode {
   aspect-ratio: 2.2;
   vertical-align: top
 }
-
 .detail_movie .detail_top .top_bg:before {
   content: '';
   position: absolute;
@@ -1109,7 +997,6 @@ html.dark #header .btn_darkmode {
   left: 0;
   background: rgba(0, 0, 0, 0.40)
 }
-
 .detail_movie .detail_top .top_con {
   position: absolute;
   left: 50%;
@@ -1118,32 +1005,27 @@ html.dark #header .btn_darkmode {
   transform: translateX(-50%);
   font-size: var(--font-size-content1);
 }
-
 .detail_movie .detail_top .top_con .title {
   color: var(--color-fix-white);
   font-size: var(--font-size-title4);
   line-height: 1.2;
   margin-bottom: clamp(12px, 1.5vw, 14px)
 }
-
 .detail_movie .detail_top .top_con .titleOriginal {
   color: var(--color-fix-white);
   font-size: var(--font-size-content1);
   opacity: .6;
 }
-
 .detail_movie .detail_top .top_con .openingDate {
   color: var(--color-fix-white);
   font-size: var(--font-size-content1);
   opacity: .6;
 }
-
 .detail_movie .detail_top .top_con .genre {
   color: var(--color-fix-white);
   font-size: var(--font-size-content1);
   opacity: .6;
 }
-
 .detail_movie .detail_top .average {
   position: absolute;
   top: clamp(24px, 2.5vw, 40px);
@@ -1157,36 +1039,30 @@ html.dark #header .btn_darkmode {
   background: red var(--icon-star) no-repeat center clamp(4px, 1.5vw, 8px);
   background-size: clamp(16px, 1.5vw, 22px) clamp(16px, 1.5vw, 22px)
 }
-
 .detail_movie .detail_top .average span {
   display: inline-block;
   color: #fff;
   font-size: var(--font-size-title2);
   transform: scale(.8);
 }
-
 .detail_movie .detail_con {
   position: relative;
   padding: 0 2rem 0 20rem
 }
-
 .detail_movie .description p {
   font-size: var(--font-size-content2);
   padding: var(--font-size-content1) 0
 }
-
 .detail_movie .poster {
   position: absolute;
   top: 1rem;
   left: 0;
   width: 18rem
 }
-
 .detail_movie .poster img {
   width: 90%;
   height: auto
 }
-
 .detail_movie .cast ul {
   display: flex;
   flex-wrap: wrap;
@@ -1194,13 +1070,11 @@ html.dark #header .btn_darkmode {
   align-content: stretch;
   gap: 3rem;
 }
-
 .detail_movie .cast li {
   position: relative;
   width: 120px;
   text-align: center
 }
-
 .detail_movie .cast .photo {
   width: 120px;
   height: 120px;
@@ -1208,23 +1082,19 @@ html.dark #header .btn_darkmode {
   background: var(--icon-cast-empty) no-repeat center center;
   background-size: 98% 98%;
 }
-
 .detail_movie .cast .photo img {
   width: 100%;
   height: 100%;
   border-radius: 100%
 }
-
 .detail_movie .cast .name {
   font-size: var(--font-size-content2);
   word-break: keep-all;
 }
-
 .detail_movie .cast .role {
   color: var(--color-text-secondary);
   font-size: var(--font-size-small1)
 }
-
 .detail_movie .photos ul {
   display: flex;
   flex-wrap: wrap;
@@ -1233,30 +1103,25 @@ html.dark #header .btn_darkmode {
   gap: 2%;
   max-width: 1400px;
 }
-
 .detail_movie .photos li {
   flex: 0 0 49%;
   margin-top: 1rem
 }
-
 .detail_movie .photos li img {
   width: 100%;
   height: auto
 }
-
 .detail_movie .detail_title {
   margin: 5rem 0 1.2rem;
   line-height: 1.4;
   font-weight: 800;
   font-size: var(--font-size-title3)
 }
-
 .detail_movie .reviews li {
   position: relative;
   margin-bottom: 2rem;
   padding-left: clamp(44px, 4vw, 56px)
 }
-
 .detail_movie .reviews li .rating {
   position: absolute;
   top: .3rem;
@@ -1274,34 +1139,28 @@ html.dark #header .btn_darkmode {
   border-radius: 40px;
   line-height: 2
 }
-
 .detail_movie .reviews li .name {
   padding: clamp(2px, 1vw, 4px) 0;
   font-weight: 600
 }
-
 .detail_movie .reviews li .review {
   margin-bottom: clamp(10px, 1vw, 12px);
   font-size: var(--font-size-content1);
   word-break: keep-all;
   white-space: pre-wrap;
 }
-
 .detail_movie .reviews li .review_date {
   color: var(--color-text-secondary);
   font-size: var(--font-size-small1)
 }
-
 .detail_movie .reviews li .btn_right {
   position: absolute;
   right: 0;
   bottom: 0
 }
-
 .detail_movie .reviews li .btn.sub {
   margin: 0 clamp(1px, 1vw, 3px)
 }
-
 .detail_movie .reviews .review_login {
   display: flex;
   align-items: center;
@@ -1313,14 +1172,12 @@ html.dark #header .btn_darkmode {
   padding: .6rem;
   font-size: var(--font-size-content1);
 }
-
 .detail_movie .reviews .review_login em {
   color: var(--color-blue);
   text-decoration: underline;
   font-style: normal;
   margin-right: 6px;
 }
-
 .detail_movie .reviews .review_input {
   width: 100%;
   background: var(--color-input-bg);
@@ -1329,23 +1186,19 @@ html.dark #header .btn_darkmode {
   padding: .6rem;
   font-size: var(--font-size-content1);
 }
-
 .detail_movie .reviews .review_write {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: clamp(6px, 2vw, 6px) 0 clamp(30px, 3vw, 50px)
 }
-
 .detail_movie .reviews .btn_update .btn {
   margin-left: clamp(6px, 1vw, 8px)
 }
-
 .detail_movie .reviews .star_rating {
   display: flex;
   align-items: center
 }
-
 .detail_movie .reviews .number {
   display: inline-block;
   width: clamp(22px, 2vw, 25px);
@@ -1359,51 +1212,41 @@ html.dark #header .btn_darkmode {
   font-size: var(--font-size-small1);
   background: #333;
 }
-
 .detail_movie .reviews .average-rating {
   display: inline-block;
   height: clamp(18px, 1vw, 30px);
   margin-top: clamp(-20px, -2vw, -9px);
 }
-
 .detail_movie .reviews .nodata {
   font-size: var(--font-size-content1);
   color: var(--color-text-secondary);
   text-align: center;
   padding: 1rem 0 3rem
 }
-
 @media screen and (max-width:1400px) {
   .detail_movie .detail_con {
     padding: 0 2rem 0 26rem
   }
-
   .detail_movie .poster {
     width: 24rem
   }
 }
-
 @media screen and (max-width:800px) {
   .detail_movie {
     padding: 0
   }
-
   .detail_movie .detail_top {
     height: 50vh;
   }
-
   .detail_movie .detail_top .top_bg img {
     height: 50vh
   }
-
   .detail_movie .detail_con {
     padding: 0 4rem
   }
-
   .detail_movie .detail_title {
     margin: 50px 0 10px
   }
-
   .detail_movie .poster {
     position: relative;
     top: auto;
@@ -1412,38 +1255,31 @@ html.dark #header .btn_darkmode {
     margin-top: 8rem;
     text-align: center
   }
-
   .detail_movie .cast li {
     width: 90px
   }
-
   .detail_movie .cast .photo {
     width: 90px;
     height: 90px;
   }
-
   .detail_movie .photos ul {
     flex-wrap: nowrap;
     flex-direction: column;
   }
-
   .detail_movie .photos li {
     margin-top: clamp(5px, 3vw, 10px);
   }
-
   .detail_movie .reviews li {
     margin-bottom: clamp(28px, 3vw, 46px)
   }
 }
-
 .login {
-  max-width: 540px;
+  max-width: 480px;
   min-width: 200px;
   margin: 0 auto;
   padding: 0 24px;
   overflow: hidden
 }
-
 .login:before {
   content: '';
   position: absolute;
@@ -1454,22 +1290,18 @@ html.dark #header .btn_darkmode {
   background-image: linear-gradient(to bottom, #f5f5f5 0, var(--color-bg-body) 300px);
   z-index: -1
 }
-
 html.dark .login:before {
   background-image: linear-gradient(to bottom, #262628 0, var(--color-bg-body) 300px)
 }
-
 .login .sub_title {
   padding: clamp(30px, 3vw, 50px) 0 0;
   font-weight: 600;
 }
-
 .login p {
   position: relative;
   height: 50px;
   margin: 20px 0 30px
 }
-
 .login p.validate_info {
   position: relative;
   height: auto;
@@ -1478,13 +1310,11 @@ html.dark .login:before {
   color: var(--color-red);
   margin: -20px 0 20px
 }
-
 .login p.error_info {
   color: var(--color-red);
   margin: -10px 0 20px;
   text-align: center
 }
-
 .login input {
   box-sizing: border-box;
   padding: 0 0 5px 5px;
@@ -1497,7 +1327,6 @@ html.dark .login:before {
   font-size: var(--font-size-content1);
   background: none
 }
-
 .login label {
   position: absolute;
   left: 0%;
@@ -1508,7 +1337,6 @@ html.dark .login:before {
   text-align: left;
   pointer-events: none;
 }
-
 .login label:after {
   content: "";
   position: absolute;
@@ -1520,12 +1348,10 @@ html.dark .login:before {
   transition: transform .3s ease;
   transform: scaleX(0);
 }
-
 .login .invalid label:after {
   border-bottom: 1px solid red;
   transform: scaleX(1)
 }
-
 .login label span {
   position: absolute;
   left: 0;
@@ -1535,36 +1361,33 @@ html.dark .login:before {
   transform-origin: top left;
   font-size: var(--font-size-content1)
 }
-
 .login input:focus+label span {
   transform: translateY(-100%) scale(.8);
   color: var(--color-blue);
 }
-
 .login input:focus+label::after {
   transform: scaleX(1);
 }
-
 .login input:not(:placeholder-shown):not(:focus)+label span {
   transform: translateY(-100%) scale(.8);
   color: var(--color-text-secondary);
 }
-
 .login input::placeholder {
   color: rgba(255, 255, 255, 0)
 }
-
 .login button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
   width: 100%;
   padding: 12px 0;
   margin-top: 15px;
   z-index: 1
 }
-
 .login .loginInfo {
   text-align: center;
 }
-
 .login .alert {
   display: flex;
   padding: 10px;
@@ -1574,65 +1397,55 @@ html.dark .login:before {
   font-size: 14px;
   line-height: 1.4
 }
-
 .login .alert .icon {
   color: #fff;
   margin-right: 10px
 }
-
 .login .alert .icon svg {
   width: 24px;
   height: 24px;
   fill: currentColor;
 }
-
 .login .success {
   width: 80%;
   margin: 0 auto
 }
-
 .login .success p {
   text-align: center;
   font-size: var(--font-size-title2);
   height: auto;
   padding: clamp(80px, 3vw, 100px) 0 0;
 }
-
 .login .success .name {
   display: block;
   color: #31a5fa;
   font-size: var(--font-size-title2);
   font-weight: 600;
 }
-
 .login .success span {
   display: block;
   font-size: var(--font-size-content2);
   padding-top: 1rem
 }
-
 .login .btn_signup,
 .login .btn_resetpassword {
   position: relative;
+  height: auto;
   text-align: center;
   padding-top: clamp(30px, 3vw, 50px);
   font-size: var(--font-size-content1)
 }
-
 .login .btn_signup a,
 .login .btn_resetpassword a {
   color: var(--color-blue);
   font-size: var(--font-size-content1);
   text-decoration: underline;
 }
-
 .login .btn_resetpassword {
   padding-top: .5rem
 }
-
 /* 상단 로그인 메뉴 아이콘
 url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="512" height="512" viewBox="0 0 512 512"%3E%3Cpath fill="currentColor" d="M256 256a112 112 0 1 0-112-112a112 112 0 0 0 112 112Zm0 32c-69.42 0-208 42.88-208 128v64h416v-64c0-85.12-138.58-128-208-128Z"%2F%3E%3C%2Fsvg%3E') */
-
 .data-loader {
   position: relative;
   top: 30px;
@@ -1644,15 +1457,84 @@ url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" widt
   background-size: 100% 100%;
   animation: circle-pulse .8s ease-in-out infinite alternate;
 }
-
 @keyframes circle-pulse {
   0% {
     transform: scale(0.5);
     opacity: 0.1;
   }
-
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+.movie-skeleton .sub_title {
+  width: 150px;
+  height: 45px;
+  margin: clamp(48px, 5vw, 78px) auto 0;
+  background: linear-gradient (95deg, #eceeef 35%, #f9f9f9 50%, #eceeef 65%);
+  /* background: #eceeef; */
+  animation: pulse 1.8s linear infinite;
+}
+.movie-skeleton .list {
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 20px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 1rem auto;
+  padding: 0 2rem;
+  display: grid
+}
+.movie-skeleton .list li .thumb {
+  aspect-ratio: auto 9 / 6;
+  position: relative;
+  background: linear-gradient (95deg, #eceeef 35%, #f9f9f9 50%, #eceeef 65%);
+  background-size: 300% auto;
+  animation: pulse 1.8s linear infinite;
+}
+.movie-skeleton .list li .title {
+  width: 90%;
+  height: 28px;
+  background: linear-gradient (90deg, #eceeef 35%, #f9f9f9 50%, #eceeef 65%);
+  background-size: 300% auto;
+  animation: pulse 1.85 linear 0.1s infinite;
+}
+.movie-skeleton .list li .titleOriginal {
+  width: 80%;
+  height: 18px;
+  margin-top: 5px;
+  background: linear-gradient (90deg, #eceeef 35%, #f9f9f9 50%, #eceeef 65%);
+  background-size: 300% auto;
+  animation: pulse 1.8s linear 0.1s infinite;
+}
+.movie-skeleton .list li .description {
+  width: 70%;
+  height: 28px;
+  margin-top: 5px;
+  background: linear-gradient (90deg, #eceeef 35%, #f9f9f9 50%, #eceeef 65%);
+  background-size: 300% auto;
+  animation: pulse 1.8s linear 0.1s infinite;
+}
+.movie-skeleton .list li .info {
+  width: 60%;
+  height: 18px;
+  margin-top: 5px;
+  background: linear-gradient (90deg, #eceeef 35%, #f9f9f9 50%, #eceeef 65%);
+  background-size: 300% auto;
+  animation: pulse 1.8s linear 0.1s infinite;
+}
+@keyframes pulse {
+  /* 50% {
+  opacity: .5
+  */
+  0% {
+    background-position: 100% 0%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .movie-skeleton .list {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,9 +1,10 @@
 "use client"
 import { usePathname } from 'next/navigation'
 import Link from "next/link"
+import AuthButton from "./AuthButton"
+import DarkMode from "./DarkMode"
 // import MovieSearch from "./MovieSearch"
 // import LoginMenu from "./LoginMenu"
-// import DarkMode from "./DarkMode"
 
 export default function Navbar() {
   const pathname = usePathname()
@@ -24,8 +25,9 @@ export default function Navbar() {
         </ul>
       </nav>
       <div className="util">
+        <DarkMode />
+        <AuthButton />
         {/* <MovieSearch /> 검색 버튼 */}
-        {/* <DarkMode /> 다크 모드 버튼 */}
         {/* <langMenu /> 언어 설정 버튼 */}
         {/* <LoginMenu /> 로그인 버튼 */}
       </div>

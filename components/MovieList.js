@@ -1,11 +1,14 @@
 import { client } from "../sanity/lib/client"
 import { urlFor } from "../sanity/lib/image"
+import { cacheLife, cacheTag } from "next/cache"
 import Image from "next/image"
 import Link from "next/link"
 import Pagination from "./Pagination"
 
 async function getMovies(page = 1, limit = 3, searchTerm = '') {
   'use cache'
+  cacheLife('hours')
+  cacheTag('movies')
   const start = (page - 1) * limit
   const end = start + limit
   // 1. 검색어에 따라 필터 문자열을 동적으로 생성합니다.
@@ -40,11 +43,10 @@ async function getMovies(page = 1, limit = 3, searchTerm = '') {
 
 export default async function MovieList({ searchParams, limit, showPagination = true }) {
   const params = await searchParams || {}
-  const pageNumber = params.page || '1'
-  const page = parseInt(pageNumber, 10)
-  const searchTerm = params.title || ''; // 'title' 검색어 추출
+  const page = parseInt(params.page || '1', 10)
+  const searchTerm = params.title || ''
   const { movies, totalCount, totalPages, currentPage } = await getMovies(page, limit, searchTerm)
-  console.log(movies, 'page', page, 'totalCount', totalCount, 'totalPages', totalPages, 'currentPage', currentPage)
+  // console.log(movies, 'page', page, 'totalCount', totalCount, 'totalPages', totalPages, 'currentPage', currentPage)
   return (
     <>
       <h2 className="sub_title">Movies</h2>
