@@ -55,7 +55,7 @@ export default async function MovieList({ searchParams, limit, showPagination = 
           <li key={movie._id}>
             <Link href={`/movies/${movie._id}`}>
               <div className="thumb">
-                <Image loading="eager" src={urlFor(movie.images).url()} alt={movie.images.alt} width={640} height={427} />
+                <Image src={urlFor(movie.images).url()} alt={movie.images.alt} width={640} height={427} />
               </div>
               <h2 className="title">{movie.title}</h2>
               <h2 className="titleOriginal">{movie.titleOriginal}</h2>

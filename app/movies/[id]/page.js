@@ -56,7 +56,7 @@ export default async function MovieDetailPage({ params }) {
             <PortableText value={movie.content} />
           </div>
           <div className="poster">
-            <Image loading="eager" src={urlFor(movie.poster).url()} alt={movie.poster.alt} width={311} height={466} />
+            <Image src={urlFor(movie.poster).url()} alt={movie.poster.alt} width={311} height={466} />
           </div>
 
           <div className="cast">
@@ -66,7 +66,7 @@ export default async function MovieDetailPage({ params }) {
                 <li key={cast._key}>
                   <p className="photo">
                     {cast.photo?.asset && (
-                      <Image loading="eager" src={urlFor(cast.photo).url()} alt={cast.photo.alt} width={150} height={150} />
+                      <Image src={urlFor(cast.photo).url()} alt={cast.photo.alt} width={150} height={150} />
                     )}
                   </p>
                   <p className="name">{cast.name}</p>
@@ -81,7 +81,7 @@ export default async function MovieDetailPage({ params }) {
             <ul>
               {movie.images.map((image) => (
                 <li key={image._key}>
-                  <Image loading="eager" src={urlFor(image).url()} alt={image.alt} width={640} height={440} />
+                  <Image src={urlFor(image).url()} alt={image.alt} width={640} height={440} />
                 </li>
               ))}
             </ul>
