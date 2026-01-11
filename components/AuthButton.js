@@ -2,7 +2,8 @@
 import { signOut, useSession } from "next-auth/react"
 import { useState } from "react"
 import { usePathname } from "next/navigation"
-import Link from "next/link";
+import Link from "next/link"
+import Image from "next/image"
 
 export default function AuthButton() {
   const { data: session } = useSession()
@@ -11,24 +12,28 @@ export default function AuthButton() {
 
   if (session) {
     return (
-      <div className="login_area login_is" >
+      <div className="login_area login_is">
         <button className="btn_login" onClick={() => setUserOpen(!userOpen)}>
           <em>
-            <img
+            <Image
               src={session.user?.image || ""}
               alt="Profile"
               className="profile"
+              width={40}
+              height={40}
             />
           </em>
-        </button >
+        </button>
         {userOpen && (
           <div className={`user_layer ${userOpen ? 'active' : ''}`}>
             <div className="user_layer_in" onClick={() => setUserOpen(false)}></div>
             <p className="user_info">
-              <img
+              <Image
                 src={session.user?.image || ""}
                 alt="Profile"
                 className="profile"
+                width={50}
+                height={50}
               />
               <span className="name">{session.user?.name}님</span>
               <span className="email">{session.user?.email}</span>
@@ -40,7 +45,7 @@ export default function AuthButton() {
             </p>
           </div>
         )}
-      </div >
+      </div>
     )
   }
   return (
@@ -48,6 +53,6 @@ export default function AuthButton() {
       <Link href={`/login?callbackUrl=${encodeURIComponent(pathname)}`} className="btn_login">
         <em><span className="sr_only">Login</span></em>
       </Link>
-    </div >
+    </div>
   )
 }

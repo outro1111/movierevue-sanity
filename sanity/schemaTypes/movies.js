@@ -123,7 +123,7 @@ export const movieSchema = defineType({
       title: 'Opening Day',
       type: 'date',
       options: {
-        dateFormat: 'YYYY-MM-DD',
+        dateFormat: 'YYYY.MM.DD',
       }
     }),
     defineField({

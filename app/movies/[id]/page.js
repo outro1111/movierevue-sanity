@@ -1,7 +1,10 @@
 import { client } from "@/sanity/lib/client"
 import { urlFor } from "@/sanity/lib/image"
 import { PortableText } from "@portabletext/react"
+import { Suspense } from "react"
 import Image from "next/image"
+import ReviewList from "@/components/ReviewList"
+import { cacheTag } from "next/cache"
 
 async function getMovieDetail(id) {
   'use cache'
@@ -20,6 +23,25 @@ async function getMovieDetail(id) {
   return await client.fetch(query, { id });
 }
 
+async function getReviews(movieId) {
+  'use cache'
+  const query = `
+    *[_type == "review" && movie._ref == $movieId] | order(_createdAt desc) {
+      _id,
+      _createdAt,
+      content,
+      rating,
+      user->{
+        _id,
+        _createdAt,
+        name,
+        image
+      }
+    }`;
+  cacheTag('reviews')
+  return await client.fetch(query, { movieId });
+}
+
 export async function generateStaticParams() {
   const query = `*[_type == "movies"]{ _id }`;
   const movies = await client.fetch(query);
@@ -30,8 +52,10 @@ export async function generateStaticParams() {
 }
 
 export default async function MovieDetailPage({ params }) {
+  'use cache'
   const { id } = await params
   const movie = await getMovieDetail(id)
+  const reviews = await getReviews(id)
   // console.log(movie)
 
   return (
@@ -86,6 +110,10 @@ export default async function MovieDetailPage({ params }) {
               ))}
             </ul>
           </div>
+
+          <Suspense fallback={<div>Loading...</div>}>
+            <ReviewList reviews={reviews} movieId={id} />
+          </Suspense>
 
         </div>
       </div>
